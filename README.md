@@ -1,48 +1,55 @@
 # Music-Recommendation-System-Using-NLP
 Music Recommendation System Using NLP
+# Music Recommendation System
+
+This project implements a music recommendation system using content-based filtering. It suggests similar songs based on the input song provided by the user.
 
 ## Overview
-This project implements a song recommendation system based on textual data using Natural Language Processing (NLP) techniques. The system analyzes song lyrics to recommend similar songs to users.
 
-## Dependencies
-- Python 3.x
-- pandas
-- scikit-learn
-- NLTK
+The system utilizes a dataset containing song information, including song titles, artists, and song lyrics. Using natural language processing techniques, it computes the similarity between songs based on their lyrics. When a user selects a song, the system recommends a list of similar songs.
 
-## Installation
-1. Clone the repository:
-2. Install dependencies:
+## Technologies Used
 
-## Usage
-1. Prepare your song data in CSV format with columns including 'song', 'text', and 'link'.
-2. Place your CSV file in the project directory.
-3. Update the file path in the script (`spotify_millsongdata.csv`) to match your data file.
-4. Run the script:
+- Python
+- Flask
+- HTML/CSS
+- Bootstrap
+- Pandas
+- Scikit-learn
 
-5. Input the song name for which you want recommendations.
-6. Receive recommendations based on textual similarity between songs.
+## Dataset
+
+The project uses the Spotify Million Song Dataset, which contains a million songs' metadata and audio features.
 
 ## File Descriptions
-- `song_recommendation.py`: Main script implementing the recommendation system.
-- `spotify_millsongdata.csv`: Sample dataset containing song information.
-- `README.md`: Project documentation.
-- `requirements.txt`: List of Python dependencies.
 
-## Data Preprocessing
-- The script performs text cleaning and preprocessing on the song lyrics, including lowercasing, removing special characters, tokenization, and stemming.
+- `app.py`: Contains the Flask application code for handling user requests and providing recommendations.
+- `df.pkl`: Pickled Pandas DataFrame containing the preprocessed song data.
+- `similarity.pkl`: Pickled cosine similarity matrix between songs.
+- `templates/index.html`: HTML template for the user interface.
+- `templates/recommendations.html`: HTML template to display recommended songs.
+- `static/style.css`: CSS file for styling the web interface.
 
-## Model Training
-- The system utilizes TF-IDF vectorization and cosine similarity to compute the similarity between songs based on their lyrics.
+## Usage
 
-## Recommendations
-- Given a song name, the system provides a list of recommended songs that are most similar in terms of their textual content.
+1. Ensure you have Python installed on your system.
+2. Install the required dependencies by running `pip install -r requirements.txt`.
+3. Run the Flask application by executing `python app.py`.
+4. Access the application through a web browser at `http://localhost:5000`.
 
-## Serialization
-- The similarity matrix and DataFrame are serialized using pickle for faster retrieval during recommendation.
+## Acknowledgments
+
+- Spotify for providing the Million Song Dataset.
+- Kaggle for hosting the dataset and fostering a community of data enthusiasts.
+- OpenAI for providing language models like GPT-3, which can be used for text processing tasks.
 
 ## Future Improvements
-- Incorporate additional features such as song metadata (artist, genre) for better recommendation accuracy.
-- Experiment with different NLP techniques and algorithms to improve performance.
-- Develop a user interface for easier interaction with the recommendation system.
 
+- Incorporate collaborative filtering techniques to enhance recommendations based on user preferences and behaviors.
+- Implement user authentication to provide personalized recommendations for each user.
+- Improve the user interface to make it more interactive and visually appealing.
+- Deploy the application on a cloud platform for wider accessibility.
+
+## Interface
+
+![Uploading image.png…]()
