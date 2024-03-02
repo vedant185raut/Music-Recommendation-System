@@ -51,5 +51,6 @@ The project uses the Spotify Million Song Dataset, which contains a million song
 - Deploy the application on a cloud platform for wider accessibility.
 
 ## Interface
+![interface](https://github.com/vedant185raut/Music-Recommendation-System/assets/105361526/b973b0e0-8e18-4349-ad97-23acca98df7c)
 
-![Uploading image.png…]()
+
